@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Permainan Air, Batu, Cawan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Permainan Air, Batu, dan Cawan</h1>
+  <div id="login-section">
+    <input type="text" id="username" placeholder="Nama pemain">
+    <button onclick="login()">Log Masuk</button>
+  </div>
+
+  <div id="game-section" style="display: none;">
+    <p id="status">Pusingan: 1 dari 3</p>
+    <div>
+      <button onclick="pilih('batu')">🪨 Batu</button>
+      <button onclick="pilih('air')">💧 Air</button>
+      <button onclick="pilih('cawan')">☕ Cawan</button>
+    </div>
+    <p id="keputusan"></p>
+    <p id="markah"></p>
+  </div>
+
+  <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+<!-- Config kita -->
+<script>
+  const firebaseConfig = {
+  apiKey: "AIzaSyCyMTRVuUnMpqii0N2aaXJ1eI409qcDEDU",
+  authDomain: "permainanairbatucawan.firebaseapp.com",
+  databaseURL: "https://permainanairbatucawan-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "permainanairbatucawan",
+  storageBucket: "permainanairbatucawan.appspot.com",
+  messagingSenderId: "837166932811",
+  appId: "1:837166932811:web:1d8429ced6c6365f217ece"
+};
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="script.js"></script>
+
+<div>
+  <h2>Rekod Semua Pemain</h2>
+  <ul id="rekod-list"></ul>
+  <button onclick="paparSemuaRekod()">Refresh Rekod</button>
+</div>
+
+</body>
+</html>

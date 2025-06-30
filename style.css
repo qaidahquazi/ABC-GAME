@@ -1,0 +1,88 @@
+/* FONT GOOGLE: Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #fef6e4, #f9dcc4);
+  color: #1c1c1c;
+  margin: 0;
+  padding: 30px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #ff6b6b;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+input, button {
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  margin: 8px;
+  background-color: #ffb5a7;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.08);
+  background-color: #f08080;
+}
+
+#login-section,
+#game-section {
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+#keputusan {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 25px;
+  transition: color 0.3s ease;
+}
+
+#status,
+#markah {
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+ul#rekod-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+ul#rekod-list li {
+  background: #ffdab9;
+  margin: 8px auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #4e342e;
+  font-size: 16px;
+  max-width: 400px;
+}
+
+@keyframes victoryShake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+  75% { transform: rotate(2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.victory {
+  animation: victoryShake 0.4s ease-in-out;
+}
